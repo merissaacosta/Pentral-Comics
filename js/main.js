@@ -257,6 +257,8 @@ var mySlider = {
       var activeSlideContent = active.find('.slide-content');
       var activefakeBg = active.find('.fake-bg');
       var activeImageCaption = active.find('.image-caption');
+      // custom
+      var activeHomeImg = active.find('.fslide-img img');
 
       var newTitleBg = newSlide.find('.title-background .mask-wrap');
       var newTitle = newSlide.find('.title-wrapper h1 .mask-wrap');
@@ -264,6 +266,8 @@ var mySlider = {
       var newfakeBg = newSlide.find('.fake-bg');
       var nextImageCaption = newSlide.find('.image-caption');
       var img = $('<img />')
+      // custom
+
 
       newSlide.addClass('next');
 
@@ -273,6 +277,8 @@ var mySlider = {
       newTitle.addClass('mask-down');
       newTitleBg.addClass('mask-up');
       nextImageCaption.addClass('mask-down');
+      // custom
+      activeHomeImg.addClass('fadein');
 
 
       TweenMax.set(activeSlideContent, {width:w});
@@ -310,6 +316,8 @@ var mySlider = {
          activeTitleBg.removeClass('mask-down');
         activeImageCaption.removeClass('mask-up');
         nextImageCaption.removeClass('mask-down');
+        // custom
+        activeHomeImg.removeClass('fadein');
 
       },1500)
   }
