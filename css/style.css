@@ -737,6 +737,21 @@ body, html {
   transition: all 0.3s ease-in;
 }
 
+/* line 683, ../sass/_partials/_slider.scss */
+.slider-content .about .title-wrapper {
+  margin-top: 5rem;
+  margin-right: 20%;
+}
+/* line 687, ../sass/_partials/_slider.scss */
+.slider-content .about .title-wrapper .about-p p {
+  width: 60%;
+  float: right;
+  font-size: 14px;
+  line-height: 17px;
+  border: solid #fff 2px;
+  padding: 11px;
+}
+
 /* line 4, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper {
   position: absolute;

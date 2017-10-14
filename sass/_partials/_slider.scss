@@ -677,3 +677,22 @@ body, html{
         }
     }
 }
+
+.slider-content {
+    .about {
+        .title-wrapper {
+            margin-top: 5rem;
+            margin-right: 20%;
+            .about-p {
+                p {
+                    width: 60%;
+                    float: right;
+                    font-size: 14px;
+                    line-height: 17px;
+                    border: solid #fff 2px;
+                    padding: 11px;
+                }
+            }
+        }
+    }
+}
