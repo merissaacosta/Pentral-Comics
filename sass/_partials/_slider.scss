@@ -113,7 +113,6 @@ body, html{
   nav {
     display:block;
     font-size:1.2rem;
-    font-weight:bold;
     line-height:1;
     font-weight:700;
     color:white;
@@ -222,7 +221,7 @@ body, html{
 
   .slider-container {
     position:relative;
-    height: 70rem;
+    height: 100vh;
     overflow: hidden;
   }
 
@@ -296,7 +295,7 @@ body, html{
     }
 
     &.blue {
-      background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/aline-weber_copy.png);
+      //background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/aline-weber_copy.png);
       background-color: $blue;
     }
 
@@ -501,7 +500,7 @@ body, html{
   right:3rem;
   top:50%;
   transform:translateY(-50%);
-  z-index:999;
+  z-index:1000;
 
   ul {
     position:relative;
@@ -590,7 +589,7 @@ body, html{
   right:0rem;
   width:80%;
   height:6rem;
-  z-index:999;
+  z-index:50;
 
   ul {
     list-style:none;
@@ -643,4 +642,38 @@ body, html{
 
   }
 
+}
+
+//custom
+
+.slider-content {
+    .fslide-img.toleft {
+        .homeimg {
+            //left: -170%;
+            opacity: 0;
+            transform: translate3d(-150%, 0px, 0px);
+            transition: all 0.3s ease-in;
+        }
+    }
+    .fslide-img.fromright {
+        .homeimg {
+            transform: translate3d(0%, 0px, 0px);
+            opacity: 1;
+            transition: all 0.3s ease-in;
+        }
+    }
+    .modal-wrapper.toleft {
+        .eachmodal_wrapper {
+            opacity: 0;
+            transform: translate3d(-150%, 0px, 0px);
+            transition: all 0.3s ease-in;
+        }
+    }
+    .modal-wrapper.fromright {
+        .eachmodal_wrapper {
+            transform: translate3d(0%, 0px, 0px);
+            opacity: 1;
+            transition: all 0.3s ease-in;
+        }
+    }
 }

@@ -29,98 +29,98 @@ var mySlider = {
 
    init : function(config) {
 
-     this.canvasInit();
+     // this.canvasInit();
      $(mySlider.config.footerButtons).
             click(function() {
                 mySlider.changeButton($(this));
             });
     },
 
-  canvasInit : function() {
+  // canvasInit : function() {
+  //
+  //   var canvas = $('.canvas')[0];
+  //   var ctx = canvas.getContext('2d');
+  //   var w = $(mySlider.config.activeSlide).width();
+  //   var h = $(mySlider.config.activeSlide).height();
+  //   var img = document.createElement('IMG');
+  //   img.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/mask-karlie.jpg";
+  //   var position = {
+  //       x: 150,
+  //       alpha:1,
+  //   }
+  //
+  //   if (window.matchMedia("(min-width: 860px)").matches) {
+  //       position = {
+  //           x: 200,
+  //           alpha:1,
+  //       }
+  //   }
+  //
+  //   if (window.matchMedia("(min-width: 1200px)").matches) {
+  //       position = {
+  //           x: 250,
+  //           alpha:1,
+  //       }
+  //   }
+  //
+  //   canvas.width = w;
+  //   canvas.height = h;
+  //   mySlider.drawMask(canvas, ctx, position, img);
+  //
+  // },
 
-    var canvas = $('.canvas')[0];
-    var ctx = canvas.getContext('2d');
-    var w = $(mySlider.config.activeSlide).width();
-    var h = $(mySlider.config.activeSlide).height();
-    var img = document.createElement('IMG');
-    img.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/mask-karlie.jpg";
-    var position = {
-        x: 150,
-        alpha:1,
-    }
-
-    if (window.matchMedia("(min-width: 860px)").matches) {
-        position = {
-            x: 200,
-            alpha:1,
-        }
-    }
-
-    if (window.matchMedia("(min-width: 1200px)").matches) {
-        position = {
-            x: 250,
-            alpha:1,
-        }
-    }
-
-    canvas.width = w;
-    canvas.height = h;
-    mySlider.drawMask(canvas, ctx, position, img);
-
-  },
-
-  drawMask : function(canvas, ctx, position,img) {
-
-    var w = $(mySlider.config.activeSlide).width();
-    var h = $(mySlider.config.activeSlide).height();
-    var cy = 50;
-    var mStroke = 25;
-    var mWidth = 180;
-    var mHeight = 300;
-
-    if (window.matchMedia("(min-width: 860px)").matches) {
-      mStroke = 35;
-      cy = 80;
-      mWidth = 260;
-      mHeight = 380;
-    }
-
-    if (window.matchMedia("(min-width: 1200px)").matches) {
-
-      mStroke = 40;
-      cy = 120;
-      mWidth = 360;
-      mHeight = 460;
-    }
-
-    ctx.globalAlpha=position.alpha;
-    ctx.clearRect(0,0,w,h);
-    ctx.save();
-    ctx.beginPath();
-    ctx.rect(position.x,cy,mWidth,mStroke);
-    ctx.clip();
-    ctx.drawImage(img,0,0, w, h);
-    ctx.restore();
-
-    ctx.save();
-    ctx.rect(position.x, cy, mStroke, mHeight);
-    ctx.clip();
-    ctx.drawImage(img,0,0, w, h);
-    ctx.restore();
-
-    ctx.save();
-    ctx.rect( position.x +mWidth, cy, mStroke, mHeight);
-    ctx.clip();
-     ctx.drawImage(img,0,0, w, h);
-    ctx.restore();
-
-    ctx.save();
-    ctx.rect(position.x, cy + (mHeight-mStroke), mWidth, mStroke);
-    ctx.clip();
-    ctx.drawImage(img,0,0, w, h);
-    ctx.restore();
-
-  },
+  // drawMask : function(canvas, ctx, position,img) {
+  //
+  //   var w = $(mySlider.config.activeSlide).width();
+  //   var h = $(mySlider.config.activeSlide).height();
+  //   var cy = 50;
+  //   var mStroke = 25;
+  //   var mWidth = 180;
+  //   var mHeight = 300;
+  //
+  //   if (window.matchMedia("(min-width: 860px)").matches) {
+  //     mStroke = 35;
+  //     cy = 80;
+  //     mWidth = 260;
+  //     mHeight = 380;
+  //   }
+  //
+  //   if (window.matchMedia("(min-width: 1200px)").matches) {
+  //
+  //     mStroke = 40;
+  //     cy = 120;
+  //     mWidth = 360;
+  //     mHeight = 460;
+  //   }
+  //
+  //   ctx.globalAlpha=position.alpha;
+  //   ctx.clearRect(0,0,w,h);
+  //   ctx.save();
+  //   ctx.beginPath();
+  //   ctx.rect(position.x,cy,mWidth,mStroke);
+  //   ctx.clip();
+  //   ctx.drawImage(img,0,0, w, h);
+  //   ctx.restore();
+  //
+  //   ctx.save();
+  //   ctx.rect(position.x, cy, mStroke, mHeight);
+  //   ctx.clip();
+  //   ctx.drawImage(img,0,0, w, h);
+  //   ctx.restore();
+  //
+  //   ctx.save();
+  //   ctx.rect( position.x +mWidth, cy, mStroke, mHeight);
+  //   ctx.clip();
+  //    ctx.drawImage(img,0,0, w, h);
+  //   ctx.restore();
+  //
+  //   ctx.save();
+  //   ctx.rect(position.x, cy + (mHeight-mStroke), mWidth, mStroke);
+  //   ctx.clip();
+  //   ctx.drawImage(img,0,0, w, h);
+  //   ctx.restore();
+  //
+  // },
 
   changeSlide : function(id) {
 
@@ -128,7 +128,7 @@ var mySlider = {
    var newSlide = $(mySlider.config.slider).find('[data-order="'+id+'"]');
 
     this.animateSlide(activeSlide, newSlide);
-    this.createMask(activeSlide, newSlide);
+    // this.createMask(activeSlide, newSlide);
 
   },
 
@@ -155,98 +155,98 @@ var mySlider = {
     }
 },
 
-  createMask : function(active, newSlide) {
-
-    var currentCanvas = active.find('.canvas')[0];
-    var nextCanvas = newSlide.find('.canvas')[0];
-    var position = mySlider.config.position;
-    var positionNext =  mySlider.config.nextPosition;
-
-    var currentctx = currentCanvas.getContext('2d');
-    var nextctx = nextCanvas.getContext('2d');
-
-    var w = $(mySlider.config.activeSlide).width();
-    var h = $(mySlider.config.activeSlide).height();
-
-    var currentImg = document.createElement('IMG');
-    var nextImg = document.createElement('IMG');
-    var movex = 200;
-
-    var position = {
-        x: 350,
-        alpha:1,
-    }
-   var nextPosition={
-        x: 150,
-        alpha:1,
-    }
-
-     TweenMax.set(positionNext, {x:"150"});
-
-    if (window.matchMedia("(min-width: 860px)").matches) {
-
-      position = {
-         x: 400,
-        alpha:1,
-      };
-
-      nextPosition = {
-          x: 200,
-          alpha:1,
-      };
-
-        movex = 200;
-
-       TweenMax.set(positionNext, {x:"200"});
-    }
-
-    if (window.matchMedia("(min-width: 1200px)").matches) {
-        position = {
-         x: 450,
-        alpha:1,
-      };
-
-      nextPosition = {
-          x: 250,
-          alpha:1,
-      };
-
-       movex = 200;
-       TweenMax.set(positionNext, {x:"250"});
-    }
-
-    currentImg.src = active.find('canvas').data('image');
-    nextImg.src = newSlide.find('canvas').data('image');
-
-    currentCanvas.width = nextCanvas.width = w;
-    currentCanvas.height = nextCanvas.height = h;
-
-    TweenMax.to(newSlide.find('.canvas'),0.3,{autoAlpha:1, delay:1.5});
-
-    TweenMax.to(positionNext, 0.5, {x:"-="+movex+"", onUpdate: function() {
-
-       mySlider.drawMask(currentCanvas, currentctx, positionNext, currentImg);
-
-     },  onComplete: function() {
-
-       TweenMax.to(active.find('.canvas'), 0.3, {autoAlpha:0}, "-=0.2");
-       TweenMax.to(newSlide.find('.canvas'), 0.3, {autoAlpha:0}, "-=0.2");
-     }});
-
-
-    nextImg.onload = function() {
-      mySlider.drawMask(nextCanvas, nextctx, positionNext, nextImg);
-
-       TweenMax.to(position, 1, {x:"-="+movex+"", delay:1.3, onUpdate: function() {
-
-           mySlider.drawMask(nextCanvas, nextctx, position, nextImg);
-
-         }});
-
-      console.log(position)
-    }
-
-  },
+  // createMask : function(active, newSlide) {
+  //
+  //   var currentCanvas = active.find('.canvas')[0];
+  //   var nextCanvas = newSlide.find('.canvas')[0];
+  //   var position = mySlider.config.position;
+  //   var positionNext =  mySlider.config.nextPosition;
+  //
+  //   var currentctx = currentCanvas.getContext('2d');
+  //   var nextctx = nextCanvas.getContext('2d');
+  //
+  //   var w = $(mySlider.config.activeSlide).width();
+  //   var h = $(mySlider.config.activeSlide).height();
+  //
+  //   var currentImg = document.createElement('IMG');
+  //   var nextImg = document.createElement('IMG');
+  //   var movex = 200;
+  //
+  //   var position = {
+  //       x: 350,
+  //       alpha:1,
+  //   }
+  //  var nextPosition={
+  //       x: 150,
+  //       alpha:1,
+  //   }
+  //
+  //    TweenMax.set(positionNext, {x:"150"});
+  //
+  //   if (window.matchMedia("(min-width: 860px)").matches) {
+  //
+  //     position = {
+  //        x: 400,
+  //       alpha:1,
+  //     };
+  //
+  //     nextPosition = {
+  //         x: 200,
+  //         alpha:1,
+  //     };
+  //
+  //       movex = 200;
+  //
+  //      TweenMax.set(positionNext, {x:"200"});
+  //   }
+  //
+  //   if (window.matchMedia("(min-width: 1200px)").matches) {
+  //       position = {
+  //        x: 450,
+  //       alpha:1,
+  //     };
+  //
+  //     nextPosition = {
+  //         x: 250,
+  //         alpha:1,
+  //     };
+  //
+  //      movex = 200;
+  //      TweenMax.set(positionNext, {x:"250"});
+  //   }
+  //
+  //   currentImg.src = active.find('canvas').data('image');
+  //   nextImg.src = newSlide.find('canvas').data('image');
+  //
+  //   currentCanvas.width = nextCanvas.width = w;
+  //   currentCanvas.height = nextCanvas.height = h;
+  //
+  //   TweenMax.to(newSlide.find('.canvas'),0.3,{autoAlpha:1, delay:1.5});
+  //
+  //   TweenMax.to(positionNext, 0.5, {x:"-="+movex+"", onUpdate: function() {
+  //
+  //      mySlider.drawMask(currentCanvas, currentctx, positionNext, currentImg);
+  //
+  //    },  onComplete: function() {
+  //
+  //      TweenMax.to(active.find('.canvas'), 0.3, {autoAlpha:0}, "-=0.2");
+  //      TweenMax.to(newSlide.find('.canvas'), 0.3, {autoAlpha:0}, "-=0.2");
+  //    }});
+  //
+  //
+  //   nextImg.onload = function() {
+  //     mySlider.drawMask(nextCanvas, nextctx, positionNext, nextImg);
+  //
+  //      TweenMax.to(position, 1, {x:"-="+movex+"", delay:1.3, onUpdate: function() {
+  //
+  //          mySlider.drawMask(nextCanvas, nextctx, position, nextImg);
+  //
+  //        }});
+  //
+  //     console.log(position)
+  //   }
+  //
+  // },
 
   animateSlide : function(active, newSlide) {
 
@@ -258,7 +258,8 @@ var mySlider = {
       var activefakeBg = active.find('.fake-bg');
       var activeImageCaption = active.find('.image-caption');
       // custom
-      var activeHomeImg = active.find('.fslide-img img');
+      var activeHomeImg = active.find('.fslide-img');
+      var activeModal = active.find('.modal-wrapper');
 
       var newTitleBg = newSlide.find('.title-background .mask-wrap');
       var newTitle = newSlide.find('.title-wrapper h1 .mask-wrap');
@@ -267,6 +268,8 @@ var mySlider = {
       var nextImageCaption = newSlide.find('.image-caption');
       var img = $('<img />')
       // custom
+      var newHomeImg = newSlide.find('.fslide-img');
+      var newModal = active.find('.modal-wrapper');
 
 
       newSlide.addClass('next');
@@ -278,7 +281,11 @@ var mySlider = {
       newTitleBg.addClass('mask-up');
       nextImageCaption.addClass('mask-down');
       // custom
-      activeHomeImg.addClass('fadein');
+      activeHomeImg.addClass('toleft');
+      activeModal.addClass('toleft');
+
+      newHomeImg.addClass('fromright');
+      // newModal.addClass('fromright');
 
 
       TweenMax.set(activeSlideContent, {width:w});
@@ -317,7 +324,11 @@ var mySlider = {
         activeImageCaption.removeClass('mask-up');
         nextImageCaption.removeClass('mask-down');
         // custom
-        activeHomeImg.removeClass('fadein');
+          newHomeImg.removeClass('toleft');
+          newHomeImg.removeClass('fromright');
+          newModal.removeClass('toleft');
+          newModal.removeClass('fromright');
+
 
       },1500)
   }
