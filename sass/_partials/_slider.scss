@@ -300,7 +300,6 @@ body, html{
     }
 
      &.green {
-      background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/miranda-kerr.png);
       background-color: $green;
     }
 
@@ -679,6 +678,14 @@ body, html{
 }
 
 .slider-content {
+    .meet-characters {
+        .image-caption {
+            left: 0rem;
+        }
+    }
+}
+
+.slider-content {
     .about {
         .title-wrapper {
             margin-top: 5rem;
@@ -693,6 +700,57 @@ body, html{
                     padding: 11px;
                 }
             }
+        }
+    }
+}
+
+.slider-content {
+    .purchase {
+        .purchase-wrapper {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-flow: row wrap;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            transform:translateY(20%);
+            .comic {
+                flex: 1;
+                flex-basis: 25%;
+                padding: 40px;
+                .shadow {
+                    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+                    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+                    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                p {
+                    background-color: #fff;
+                    padding: 15px;
+                    margin-top: -2px;
+                    text-align: center;
+                    transition: .3s;
+                }
+                a {
+                    text-decoration: none;
+                    &:hover {
+                        p {
+                            background-color: #000;
+                            color: #fff;
+                        }
+                    }
+                }
+
+            }
+        }
+        .image-caption {
+            left: 0rem;
         }
     }
 }
