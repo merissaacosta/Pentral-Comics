@@ -283,8 +283,8 @@ body, html {
 }
 /* line 215, ../sass/_partials/_slider.scss */
 .slider-content .fslide-img img {
-  width: 550px;
-  height: auto;
+  width: auto;
+  height: 100vh;
   margin: auto;
   display: block;
 }
