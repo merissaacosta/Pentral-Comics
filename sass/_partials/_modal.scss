@@ -27,13 +27,42 @@ $primary: #73B6BE;
                 height: 100%;
                 background-size: cover;
                 padding: 10px;
+                background-color: #fff;
                 h3 {
                     font-family: 'Montserrat', sans-serif;
                     font-size: 16px;
+                    font-weight: 800;
+                    color: #000000;
                 }
             }
-            .eachmodal.m_don {
-                background-image: url('https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg');
+            .eachmodal {
+                &.m_don {
+                    background-image: url('../img/characters/don.png');
+                }
+                &.m_vetus {
+                    background-image: url('../img/characters/vetus.png');
+                }
+                &.m_timore {
+                    background-image: url('../img/characters/timore.png');
+                }
+                &.m_alex {
+                    background-image: url('../img/characters/alex.png');
+                }
+                &.m_ira {
+                    background-image: url('../img/characters/ira.png');
+                }
+                &.m_mortem {
+                    background-image: url('../img/characters/mortem.png');
+                }
+                &.m_amalia {
+                    background-image: url('../img/characters/amalia.png');
+                }
+                &.m_tarum {
+                    background-image: url('../img/characters/tarum.png');
+                }
+                &.m_custos {
+                    background-image: url('../img/characters/custos.png');
+                }
             }
         }
         .center {
@@ -64,10 +93,11 @@ $primary: #73B6BE;
             position: absolute;
             cursor: pointer;
             padding: 20px;
-            color: white;
+            color: #000000;
             bottom: 0;
             right: 0;
             top: 0;
+            font-size: 18px;
         }
 
         // The mask
@@ -87,7 +117,7 @@ $primary: #73B6BE;
         // Modal
         .modal {
             transition: 0.5s ease-out;
-            background: #73B6BE;
+            background: #92d2da;
             visibility: hidden;
             position: fixed;
             @extend .center;
@@ -103,23 +133,70 @@ $primary: #73B6BE;
                     width: 60%;
                     height: 100%;
                     overflow-y: scroll;
-                    padding: 20px;
+                    padding: 60px 20px 20px 50px;
                     h2 {
                         font-size: 22px;
+                        margin-bottom: 25px;
+                        font-weight: 800;
                     }
                     p {
                         font-size: 16px;
+                        line-height: 23px;
                     }
                 }
                 .right {
                     display: inline-block;
                     width: 39%;
                     height: 100%;
-                    background-image: url('http://vignette4.wikia.nocookie.net/batman/images/8/8f/Christian_Bale_as_The_Dark_Knight.jpg/revision/latest?cb=20140208170841');
                     background-size: cover;
                     float: right;
                 }
                 //@extend .center;
+                &.mc_don {
+                    .right {
+                        background-image: url('../img/characters/don.png');
+                    }
+                }
+                &.mc_vetus {
+                    .right {
+                        background-image: url('../img/characters/vetus.png');
+                    }
+                }
+                &.mc_timore {
+                    .right {
+                        background-image: url('../img/characters/timore.png');
+                    }
+                }
+                &.mc_alex {
+                    .right {
+                        background-image: url('../img/characters/alex.png');
+                    }
+                }
+                &.mc_ira {
+                    .right {
+                        background-image: url('../img/characters/ira.png');
+                    }
+                }
+                &.mc_mortem {
+                    .right {
+                        background-image: url('../img/characters/mortem.png');
+                    }
+                }
+                &.mc_amalia {
+                    .right {
+                        background-image: url('../img/characters/amalia.png');
+                    }
+                }
+                &.mc_tarum {
+                    .right {
+                        background-image: url('../img/characters/tarum.png');
+                    }
+                }
+                &.mc_custos {
+                    .right {
+                        background-image: url('../img/characters/custos.png');
+                    }
+                }
             }
         }
 

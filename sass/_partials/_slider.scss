@@ -304,7 +304,7 @@ body, html{
     }
 
     &.grey {
-       background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/kate-moss.png);
+      background-image:url('../img/roman_cole.jpg');
       background-color: $grey;
     }
 
@@ -351,7 +351,7 @@ body, html{
     left:12rem;
     font-size:1.6rem;
     z-index:10;
-    clip: rect(0rem, 21rem, 12rem, 0px);
+    clip: rect(0rem, 22rem, 12rem, 0px);
     display:inline-block;
     transition:all 0.3s ease;
 
@@ -697,7 +697,8 @@ body, html{
                     font-size: 14px;
                     line-height: 17px;
                     border: solid #fff 2px;
-                    padding: 11px;
+                    padding: 18px;
+                    background-color: rgba(188, 188, 188, 0.4);
                 }
             }
         }

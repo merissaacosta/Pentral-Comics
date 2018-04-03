@@ -374,7 +374,7 @@ body, html {
 }
 /* line 306, ../sass/_partials/_slider.scss */
 .slider-content .fake-bg.grey {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/kate-moss.png);
+  background-image: url("../img/roman_cole.jpg");
   background-color: #bcbcbc;
 }
 /* line 314, ../sass/_partials/_slider.scss */
@@ -416,7 +416,7 @@ body, html {
   left: 12rem;
   font-size: 1.6rem;
   z-index: 10;
-  clip: rect(0rem, 21rem, 12rem, 0px);
+  clip: rect(0rem, 22rem, 12rem, 0px);
   display: inline-block;
   transition: all 0.3s ease;
 }
@@ -753,10 +753,11 @@ body, html {
   font-size: 14px;
   line-height: 17px;
   border: solid #fff 2px;
-  padding: 11px;
+  padding: 18px;
+  background-color: rgba(188, 188, 188, 0.4);
 }
 
-/* line 709, ../sass/_partials/_slider.scss */
+/* line 710, ../sass/_partials/_slider.scss */
 .slider-content .purchase .purchase-wrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -769,24 +770,24 @@ body, html {
   margin-right: auto;
   transform: translateY(20%);
 }
-/* line 720, ../sass/_partials/_slider.scss */
+/* line 721, ../sass/_partials/_slider.scss */
 .slider-content .purchase .purchase-wrapper .comic {
   flex: 1;
   flex-basis: 25%;
   padding: 40px;
 }
-/* line 724, ../sass/_partials/_slider.scss */
+/* line 725, ../sass/_partials/_slider.scss */
 .slider-content .purchase .purchase-wrapper .comic .shadow {
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.28);
   -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.28);
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.28);
 }
-/* line 729, ../sass/_partials/_slider.scss */
+/* line 730, ../sass/_partials/_slider.scss */
 .slider-content .purchase .purchase-wrapper .comic img {
   width: 100%;
   height: auto;
 }
-/* line 733, ../sass/_partials/_slider.scss */
+/* line 734, ../sass/_partials/_slider.scss */
 .slider-content .purchase .purchase-wrapper .comic p {
   background-color: #fff;
   padding: 15px;
@@ -794,16 +795,16 @@ body, html {
   text-align: center;
   transition: .3s;
 }
-/* line 740, ../sass/_partials/_slider.scss */
+/* line 741, ../sass/_partials/_slider.scss */
 .slider-content .purchase .purchase-wrapper .comic a {
   text-decoration: none;
 }
-/* line 743, ../sass/_partials/_slider.scss */
+/* line 744, ../sass/_partials/_slider.scss */
 .slider-content .purchase .purchase-wrapper .comic a:hover p {
   background-color: #000;
   color: #fff;
 }
-/* line 752, ../sass/_partials/_slider.scss */
+/* line 753, ../sass/_partials/_slider.scss */
 .slider-content .purchase .image-caption {
   left: 0rem;
 }
@@ -839,42 +840,78 @@ body, html {
   height: 100%;
   background-size: cover;
   padding: 10px;
+  background-color: #fff;
 }
-/* line 30, ../sass/_partials/_modal.scss */
+/* line 31, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-}
-/* line 35, ../sass/_partials/_modal.scss */
-.slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal.m_don {
-  background-image: url("https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg");
+  font-weight: 800;
+  color: #000000;
 }
 /* line 39, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal.m_don {
+  background-image: url("../img/characters/don.png");
+}
+/* line 42, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal.m_vetus {
+  background-image: url("../img/characters/vetus.png");
+}
+/* line 45, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal.m_timore {
+  background-image: url("../img/characters/timore.png");
+}
+/* line 48, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal.m_alex {
+  background-image: url("../img/characters/alex.png");
+}
+/* line 51, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal.m_ira {
+  background-image: url("../img/characters/ira.png");
+}
+/* line 54, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal.m_mortem {
+  background-image: url("../img/characters/mortem.png");
+}
+/* line 57, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal.m_amalia {
+  background-image: url("../img/characters/amalia.png");
+}
+/* line 60, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal.m_tarum {
+  background-image: url("../img/characters/tarum.png");
+}
+/* line 63, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .eachmodal_wrapper .eachmodal.m_custos {
+  background-image: url("../img/characters/custos.png");
+}
+/* line 68, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .center, .slide.blue .modal-wrapper .modal {
   transform: translate(-50%, -50%);
   position: absolute;
   left: 50%;
   top: 50%;
 }
-/* line 47, ../sass/_partials/_modal.scss */
+/* line 76, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .show {
   color: #fff;
 }
-/* line 56, ../sass/_partials/_modal.scss */
+/* line 85, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .show:hover {
   cursor: pointer;
 }
-/* line 63, ../sass/_partials/_modal.scss */
+/* line 92, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .close {
   position: absolute;
   cursor: pointer;
   padding: 20px;
-  color: white;
+  color: #000000;
   bottom: 0;
   right: 0;
   top: 0;
+  font-size: 18px;
 }
-/* line 74, ../sass/_partials/_modal.scss */
+/* line 104, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .mask {
   background: rgba(0, 0, 0, 0.68);
   visibility: hidden;
@@ -887,10 +924,10 @@ body, html {
   left: 0;
   top: 0;
 }
-/* line 88, ../sass/_partials/_modal.scss */
+/* line 118, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .modal {
   transition: 0.5s ease-out;
-  background: #73B6BE;
+  background: #92d2da;
   visibility: hidden;
   position: fixed;
   height: 80vh;
@@ -898,41 +935,79 @@ body, html {
   z-index: 100;
   opacity: 0;
 }
-/* line 99, ../sass/_partials/_modal.scss */
+/* line 129, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .modal .modal__content {
   height: 100%;
 }
-/* line 101, ../sass/_partials/_modal.scss */
+/* line 131, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .modal .modal__content .left {
   display: inline-block;
   width: 60%;
   height: 100%;
   overflow-y: scroll;
-  padding: 20px;
+  padding: 60px 20px 20px 50px;
 }
-/* line 107, ../sass/_partials/_modal.scss */
+/* line 137, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .modal .modal__content .left h2 {
   font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: 800;
 }
-/* line 110, ../sass/_partials/_modal.scss */
+/* line 142, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .modal .modal__content .left p {
   font-size: 16px;
+  line-height: 23px;
 }
-/* line 114, ../sass/_partials/_modal.scss */
+/* line 147, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .modal .modal__content .right {
   display: inline-block;
   width: 39%;
   height: 100%;
-  background-image: url("http://vignette4.wikia.nocookie.net/batman/images/8/8f/Christian_Bale_as_The_Dark_Knight.jpg/revision/latest?cb=20140208170841");
   background-size: cover;
   float: right;
 }
-/* line 127, ../sass/_partials/_modal.scss */
+/* line 156, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .modal .modal__content.mc_don .right {
+  background-image: url("../img/characters/don.png");
+}
+/* line 161, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .modal .modal__content.mc_vetus .right {
+  background-image: url("../img/characters/vetus.png");
+}
+/* line 166, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .modal .modal__content.mc_timore .right {
+  background-image: url("../img/characters/timore.png");
+}
+/* line 171, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .modal .modal__content.mc_alex .right {
+  background-image: url("../img/characters/alex.png");
+}
+/* line 176, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .modal .modal__content.mc_ira .right {
+  background-image: url("../img/characters/ira.png");
+}
+/* line 181, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .modal .modal__content.mc_mortem .right {
+  background-image: url("../img/characters/mortem.png");
+}
+/* line 186, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .modal .modal__content.mc_amalia .right {
+  background-image: url("../img/characters/amalia.png");
+}
+/* line 191, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .modal .modal__content.mc_tarum .right {
+  background-image: url("../img/characters/tarum.png");
+}
+/* line 196, ../sass/_partials/_modal.scss */
+.slide.blue .modal-wrapper .modal .modal__content.mc_custos .right {
+  background-image: url("../img/characters/custos.png");
+}
+/* line 204, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .active {
   visibility: visible;
   opacity: 1;
 }
-/* line 133, ../sass/_partials/_modal.scss */
+/* line 210, ../sass/_partials/_modal.scss */
 .slide.blue .modal-wrapper .active + .modal {
   visibility: visible;
   opacity: 1;
