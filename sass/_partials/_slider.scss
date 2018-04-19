@@ -269,6 +269,9 @@ body, html{
     &.grey {
       background-color: $grey;
     }
+    &.brown {
+      background-color: $brown;
+    }
 
   }
 
@@ -306,6 +309,9 @@ body, html{
     &.grey {
       background-image:url('../img/roman_cole.jpg');
       background-color: $grey;
+    }
+    &.brown {
+      background-color: $brown;
     }
 
 
@@ -442,7 +448,7 @@ body, html{
           position:absolute;
           top:0;
           right:0;
-          clip: rect(0rem, 48rem, 12rem, 0px);
+          clip: rect(0rem, 80rem, 12rem, 0px);
           transition:all 0.3s ease-in;
         }
 
@@ -606,11 +612,11 @@ body, html{
     float:left;
     width:20%;
     padding:1.5rem;
-    background:rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.5);
     text-transform:uppercase;
     height:100%;
     border-right:1px solid rgba(0,0,0,0.2);
-    cursor:pointer;
+    cursor: pointer;
 
 
     &:last-child {
@@ -675,6 +681,48 @@ body, html{
             transition: all 0.3s ease-in;
         }
     }
+    .tslide-purchase.toleft {
+      .purchase-wrapper {
+        opacity: 0;
+        transform: translate3d(-150%, 20%, 0px);
+        transition: all 0.3s ease-in;
+      }
+    }
+    .tslide-purchase.fromright {
+      .purchase-wrapper {
+        transform: translate3d(0%, 20%, 0px);
+        opacity: 1;
+        transition: all 0.3s ease-in;
+      }
+    }
+    .about-p.toleft {
+      p {
+        opacity: 0;
+        transform: translate3d(-150%, 0px, 0px);
+        transition: all 0.3s ease-in;
+      }
+    }
+    .about-p.fromright {
+      p {
+        transform: translate3d(0%, 0px, 0px);
+        opacity: 1;
+        transition: all 0.3s ease-in;
+      }
+    }
+    .contact-social.toleft {
+      ul {
+        opacity: 0;
+        transform: translate3d(-150%, 0px, 0px);
+        transition: all 0.3s ease-in;
+      }
+    }
+    .contact-social.fromright {
+      ul {
+        transform: translate3d(0%, 0px, 0px);
+        opacity: 1;
+        transition: all 0.3s ease-in;
+      }
+    }
 }
 
 .slider-content {
@@ -689,7 +737,7 @@ body, html{
     .about {
         .title-wrapper {
             margin-top: 5rem;
-            margin-right: 20%;
+            margin-right: 15%;
             .about-p {
                 p {
                     width: 60%;
@@ -754,4 +802,35 @@ body, html{
             left: 0rem;
         }
     }
+}
+
+.slider-content {
+  .slide.contact {
+    .title-wrapper {
+      margin-top: 8rem;
+      h1 {
+        span.mask-wrap {
+          text-align: center;
+          span.mask {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+      span.contact-social {
+        ul {
+          text-align: center;
+          margin-top: 65px;
+          li {
+            display: inline-block;
+            margin: 0 26px;
+            svg.icon {
+              width: 55px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
 }

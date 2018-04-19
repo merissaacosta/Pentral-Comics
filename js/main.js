@@ -260,6 +260,9 @@ var mySlider = {
       // custom
       var activeHomeImg = active.find('.fslide-img');
       var activeModal = active.find('.modal-wrapper');
+      var activePurchaseContainer = active.find('.tslide-purchase');
+      var activeAboutP = active.find('.about-p');
+      var activeSocial = active.find('.contact-social');
 
       var newTitleBg = newSlide.find('.title-background .mask-wrap');
       var newTitle = newSlide.find('.title-wrapper h1 .mask-wrap');
@@ -269,7 +272,10 @@ var mySlider = {
       var img = $('<img />')
       // custom
       var newHomeImg = newSlide.find('.fslide-img');
-      var newModal = active.find('.modal-wrapper');
+      var newModal = newSlide.find('.modal-wrapper');
+      var newPurchaseContainer = newSlide.find('.tslide-purchase');
+      var newAboutP = newSlide.find('.about-p');
+      var newSocial = newSlide.find('.contact-social');
 
 
       newSlide.addClass('next');
@@ -283,9 +289,15 @@ var mySlider = {
       // custom
       activeHomeImg.addClass('toleft');
       activeModal.addClass('toleft');
+      activePurchaseContainer.addClass('toleft');
+      activeAboutP.addClass('toleft');
+      activeSocial.addClass('toleft');
 
       newHomeImg.addClass('fromright');
-      // newModal.addClass('fromright');
+      newModal.addClass('fromright');
+      newPurchaseContainer.addClass('fromright');
+      newAboutP.addClass('fromright');
+      newSocial.addClass('fromright');
 
 
       TweenMax.set(activeSlideContent, {width:w});
@@ -321,13 +333,19 @@ var mySlider = {
          TweenMax.set(active, {width:'100%'});
          activeMainTitle.removeClass('mask-up');
          activeTitleBg.removeClass('mask-down');
-        activeImageCaption.removeClass('mask-up');
-        nextImageCaption.removeClass('mask-down');
-        // custom
+         activeImageCaption.removeClass('mask-up');
+         nextImageCaption.removeClass('mask-down');
+         // custom
           newHomeImg.removeClass('toleft');
           newHomeImg.removeClass('fromright');
           newModal.removeClass('toleft');
           newModal.removeClass('fromright');
+          newPurchaseContainer.removeClass('toleft');
+          newPurchaseContainer.removeClass('fromright');
+          newAboutP.removeClass('toleft');
+          newAboutP.removeClass('fromright');
+          newSocial.removeClass('toleft');
+          newSocial.removeClass('fromright');
 
 
       },1500)
